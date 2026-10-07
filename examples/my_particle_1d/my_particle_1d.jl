@@ -61,10 +61,13 @@ end
 
 ## we also need a function to revert the action 
 
-function Arianna.revert_action!(system::Particle, action::Displacment)
+# function Arianna.revert_action(system::Particle, action::Displacment)
+#     action.delta = -action.delta
+# end 
+
+function Arianna.invert_action!(action::Displacement, system::Particle)
     action.delta = -action.delta
 end 
-
 
 
 #-----------------------------------------
